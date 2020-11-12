@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ejercicio 11 - DOM b?sico</title>
+<script>
+window.onload = function() {
+// Numero de enlaces de la pagina
+	let enlaces=document.getElementsByTagName("a");
+
+// Direccion del penultimo enlace
+	let direPenultimo=enlaces[enlaces.length-2].href;
+
+// Numero de enlaces que apuntan a http://prueba
+	let contador=0;
+
+	
+	for(let elemento of enlaces)
+		if(elemento.href=="http://prueba/")
+				contador++;
+	
+// Numero de enlaces del tercer p?rrafo}
+	let parrafos=document.getElementsByTagName("p");
+	let cantidadP3=parrafos[2].getElementsByTagName("a").length;
+	
+	let div=document.getElementsByClassName("resultado")[0];
+	div.innerHTML="ENLACES: "+enlaces.length;
+	div.innerHTML+="<br>Dirección: "+direPenultimo;
+	div.innerHTML+="<br>Apuntas a http://prueba: "+contador;
+	div.innerHTML+="<br>ENLACES: "+cantidadP3;
+}	
+</script>
+</head>
+<body>
+<div class="resultado" style="border: 1px solid black;"></div>
+<p>Lorem ipsum dolor sit amet, <a href="http://prueba">consectetuer 
+adipiscingelit</a>. Sed mattis enim vitae orci. Phasellus libero. 
+Maecenas nisl arcu, consequatcongue, commodo nec, commodo ultricies, 
+turpis. Quisque sapien nunc, posuere vitae,rutrum et, luctus at, 
+pede. Pellentesque massa ante, ornare id, aliquam vitae, 
+ultricesporttitor, pede. Nullam sit amet nisl elementum 
+elit convallis malesuada. Phasellusmagna sem, semper quis, 
+faucibus ut, rhoncus non, mi. <a href="http://prueba2">Fusceporta</a>. 
+Duis pellentesque, felis eu adipiscing ullamcorper, odio urna 
+consequatarcu, at posuere ante quam non dolor. Lorem ipsum 
+dolor sit amet, consectetueradipiscing elit. Duis scelerisque. 
+Donec lacus neque, vehicula in, eleifend vitae,venenatis ac, 
+felis. Donec arcu. Nam sed tortor nec ipsum aliquam ullamcorper. 
+Duisaccumsan metus eu urna. Aenean vitae enim. Integer lacus.
+ Vestibulum venenatis erat euodio. Praesent id metus.</p>
+ 
+<p>Aenean at nisl. Maecenas egestas dapibus odio. Vestibulum 
+ante ipsum primis infaucibus orci luctus et ultrices posuere 
+cubilia Curae; Proin consequat auctor diam. <a href="http://prueba">
+Ut bibendum blandit est</a>. Curabitur vestibulum. Nunc 
+malesuadaporttitor sapien. Aenean a lacus et metus venenatis 
+0porta. Suspendisse cursus, sem nondapibus tincidunt, 
+lorem magna porttitor felis, id sodales dolor dolor sed urna. 
+Sedrutrum nulla vitae tellus. Sed quis eros nec lectus tempor 
+lacinia. Aliquam nec lectusnec neque aliquet dictum. 
+Etiam <a href="http://prueba3">consequat sem quis massa</a>. 
+Donec aliquam euismod diam. In magna massa, mattis id, 
+pellentesque sit amet, porta sitamet, lectus. Curabitur 
+posuere. Aliquam in elit. Fusce condimentum, arcu 
+inscelerisque lobortis, ante arcu scelerisque mi, at
+cursus mi risus sed tellus.</p>
+
+<p>Donec sagittis, nibh nec ullamcorper tristique, pede 
+velit feugiat massa, 
+at sollicitudin justo tellus vitae justo. 
+Vestibulum aliquet, nulla sit amet imperdietsuscipit, 
+nunc erat laoreet est, a 
+<a href="http://prueba">aliquam leo odio sedsem</a>.
+ Quisque eget eros vehicula diam euismod tristique. 
+ Ut dui. Donec in metus sedrisus laoreet sollicitudin. 
+ Proin et nisi non arcu sodales hendrerit. In sem. Cras
+ idaugue eu lorem dictum interdum. Donec pretium. Proin 
+ <a href="http://prueba4">egestas</a> 
+ adipiscing ligula. Duis iaculis laoreet turpis.
+ Mauris mollis est sit amet diam. Curabitur hendrerit,
+ eros quis malesuada tristique,ipsum odio euismod tortor, 
+ a vestibulum nisl mi at odio. <a href="http://prueba5">Sednon
+ lectus non est pellentesque</a> auctor.
+ </p>
+</body>
+</html>
